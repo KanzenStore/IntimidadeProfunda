@@ -48,12 +48,13 @@
         
         .floating-text {
             position: absolute;
-            opacity: 0.03;
-            font-size: 15rem;
+            opacity: 0.04;
+            font-size: 12rem;
             font-weight: bold;
             white-space: nowrap;
-            z-index: 0;
-            animation: floatText 30s linear infinite;
+            z-index: 0; /* Garante que fique atrás de todos os elementos interativos */
+            animation: floatText 40s linear infinite;
+            pointer-events: none;
         }
         
         @keyframes floatText {
@@ -109,7 +110,7 @@
     <!-- Animated background elements -->
     <div class="pulse-bg"></div>
     <div class="floating-text title-font hidden md:block">INTIMIDADE</div>
-    <div class="floating-banner absolute rotate-12 opacity-10 text-6xl md:text-8xl font-bold whitespace-nowrap z-0" style="top: 30%; left: -20%; animation: floatBanner 25s linear infinite;">
+    <div class="floating-banner absolute rotate-12 opacity-10 text-6xl md:text-8xl font-bold whitespace-nowrap z-0 pointer-events-none" style="top: 30%; left: -20%; animation: floatBanner 25s linear infinite;">
       ✝ DEUS É AMOR ✝ JESUS TE AMA ✝
     </div>
     
@@ -120,16 +121,30 @@
         <div class="absolute bottom-1/3 right-1/4 w-40 h-40 rounded-full bg-white bg-opacity-10 blur-xl"></div>
         <div class="absolute top-1/3 right-1/3 w-24 h-24 rounded-full bg-white bg-opacity-10 blur-xl"></div>
         <div class="relative z-10 max-w-6xl mx-auto text-center">
-            <h1 class="title-font text-4xl md:text-6xl font-bold mb-6 animate__animated animate__fadeInDown">
-                <span class="text-custom-beige">Ter Intimidade</span> com Deus
-            </h1>
+            <div class="relative mb-8 animate__animated animate__fadeInDown">
+                <div class="mb-6">
+                    <p class="text-white text-xl md:text-2xl font-bold animate__animated animate__fadeIn animate__infinite animate__slower" style="text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de;">
+                        🚨 PROMOÇÃO RELÂMPAGO! 70% OFF 🚨
+                    </p>
+                    <p class="text-white text-lg md:text-xl opacity-90 animate__animated animate__fadeIn animate__delay-1s animate__infinite animate__slower" style="text-shadow: 0 0 5px #fff, 0 0 10px #fff;">
+                        Válido somente até 13/07/25
+                    </p>
+                </div>
+                <h1 class="title-font text-4xl md:text-6xl font-bold">
+                    <span class="text-custom-beige">Ter Intimidade Profunda</span> com Deus
+                </h1>
+            </div>
             <h2 class="text-xl md:text-2xl mb-8 animate__animated animate__fadeIn animate__delay-1s">
                 Descubra o caminho para uma relação profunda e transformadora com o Criador
             </h2>
             <div class="animate__animated animate__fadeIn animate__delay-2s">
-                <img src="https://images.unsplash.com/photo-1535535772661-7698a043126e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
-                     alt="Ebook Ter Intimidade com Deus" 
-                     class="mx-auto rounded-lg shadow-2xl w-64 h-auto mb-8 border-4 border-custom-beige">
+                <div class="relative mx-auto w-[270px] h-[480px] mb-8">
+                    <div class="absolute inset-0 rounded-lg border-4 border-custom-beige shadow-[0_0_15px_5px_rgba(216,200,184,0.6)] animate-pulse"></div>
+                    <img src="imagens/capa intimidade 1920.png" 
+                         data-src="EDITABLE_IMAGE_PATH_HERE" 
+                         alt="Ebook Ter Intimidade com Deus" 
+                         class="absolute inset-0 w-full h-full object-cover rounded-lg shadow-2xl">
+                </div>
             </div>
             <a href="#oferta" class="neon-btn inline-block bg-white text-black font-bold py-4 px-8 rounded-full text-lg md:text-xl animate__animated animate__fadeInUp animate__delay-3s">
                 QUERO ME APROXIMAR DE DEUS AGORA!
@@ -182,11 +197,11 @@
                 </div>
             </div>
             
-            <div class="text-center">
+            <div class="text-center relative z-10">
                 <p class="text-lg mb-6">
                     <span class="font-bold">A boa notícia:</span> Intimidade com Deus não é para alguns escolhidos, mas para todos que desejam se aproximar dEle!
                 </p>
-                <a href="#oferta" class="neon-btn inline-block bg-black text-white font-bold py-3 px-6 rounded-full">
+                <a href="#compra" class="neon-btn inline-block bg-black text-white font-bold py-3 px-6 rounded-full neon-btn">
                     QUERO TRANSFORMAR MINHA RELAÇÃO COM DEUS
                 </a>
             </div>
@@ -196,7 +211,7 @@
     <!-- Logo Section -->
     <section class="py-8 px-4 bg-white">
         <div class="max-w-4xl mx-auto text-center">
-            <img src="SUA_LOGO_AQUI.png" alt="Logo da Empresa" class="mx-auto h-24">
+            <img src="imagens/logo da kanzen.png" alt="Logo da Empresa" class="mx-auto h-24">
         </div>
     </section>
 
@@ -208,15 +223,16 @@
             </h2>
             
             <div class="flex flex-col md:flex-row items-center gap-8 bg-white bg-opacity-70 p-6 rounded-lg">
-                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+                <img src="imagens/Eu 17052018.jpg" 
                      alt="Autor do Ebook" 
-                     class="w-40 h-40 rounded-full object-cover border-4 border-white shadow-lg animate__animated animate__pulse animate__infinite animate__slower">
+                     class="w-40 h-40 rounded-full object-cover border-4 border-white shadow-lg animate__animated animate__pulse animate__infinite animate__slower"
+                     data-src="EDITABLE_AUTHOR_IMAGE_PATH_HERE"> 
                 
                 <div>
                     <h3 class="title-font text-2xl font-bold mb-2">Pastor Sergio Gabanela</h3>
-                    <p class="text-gray-700 mb-4">Teólogo e Mestre em Divindade com mais de 20 anos de ministério</p>
+                    <p class="text-gray-700 mb-4">Sou Administrador de Empresas por formação e Ministro do Evangelho de Cristo há mais de 20 anos.</p>
                     <p class="text-gray-800">
-                        "Por anos, também lutei para ter uma relação mais próxima com Deus. Até que descobri princípios bíblicos poderosos que transformaram completamente minha vida espiritual. Agora, quero compartilhar esse conhecimento com você neste ebook que já impactou milhares de vidas."
+                        Atuo como Pastor e professor de ensino bíblico em nosso ministério local, com a missão de compartilhar verdades transformadoras da Palavra de Deus. Ao longo dessa jornada, tenho dedicado minha vida à pregação do Evangelho, ensinando com profundidade, clareza e revelação espiritual. Sou casado e pai de dois filhos, e creio firmemente que o conhecimento da verdade liberta e prepara o povo para viver o propósito de Deus com ousadia e intimidade.
                     </p>
                 </div>
             </div>
@@ -233,7 +249,7 @@
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="text-center p-6 rounded-lg hover:bg-gray-50 transition-all">
                     <div class="feature-icon mb-4">①</div>
-                    <h3 class="font-bold text-xl mb-3">Os 7 Níveis de Intimidade</h3>
+                    <h3 class="font-bold text-xl mb-3">Conheça os Níveis de Intimidade</h3>
                     <p class="text-gray-700">
                         Descubra como evoluir de uma relação superficial para uma comunhão profunda com Deus.
                     </p>
@@ -249,9 +265,9 @@
                 
                 <div class="text-center p-6 rounded-lg hover:bg-gray-50 transition-all">
                     <div class="feature-icon mb-4">③</div>
-                    <h3 class="font-bold text-xl mb-3">Estudo Bíblico Revelador</h3>
+                    <h3 class="font-bold text-xl mb-3">Revelação Profética</h3>
                     <p class="text-gray-700">
-                        Como ler a Bíblia e receber revelações pessoais que transformam sua vida.
+                        Descubra como Deus quer se revelar a você de maneira pessoal, prática e real.
                     </p>
                 </div>
                 
@@ -345,9 +361,14 @@
             <div class="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full bg-custom-beige bg-opacity-10 blur-xl"></div>
         </div>
         <div class="max-w-4xl mx-auto text-center relative z-10">
-            <h2 class="title-font text-3xl md:text-4xl font-bold mb-6">
-                Sua Jornada para a Intimidade com Deus Começa Aqui
-            </h2>
+            <div class="mb-8 flex flex-col items-center">
+                <div class="bg-red-600 text-white px-4 py-2 rounded-full text-sm md:text-lg font-bold animate-pulse mb-4 text-center" style="text-shadow: 0 0 8px white; box-shadow: 0 0 15px rgba(255,255,255,0.8);">
+                    ⚡ 70% DE DESCONTO - ATÉ 13/07/25 ⚡
+                </div>
+                <h2 class="title-font text-2xl md:text-4xl font-bold text-center">
+                    Sua Jornada para a Intimidade com Deus Começa Aqui
+                </h2>
+            </div>
             
             <div class="bg-gray-900 bg-opacity-70 p-8 rounded-lg mb-8 relative overflow-hidden">
                 <div class="absolute inset-0 bg-gradient-to-r from-transparent via-custom-beige to-transparent opacity-10"></div>
@@ -359,16 +380,13 @@
                     
                     <ul class="text-left max-w-md mx-auto space-y-3 mb-8">
                         <li class="flex items-center">
-                            <span class="text-custom-beige mr-2">✓</span> Ebook completo "Ter Intimidade com Deus" (PDF, ePub, Mobi)
+                            <span class="text-custom-beige mr-2">✓</span> Ebook completo "Ter Intimidade Profunda com Deus" (PDF)
                         </li>
                         <li class="flex items-center">
-                            <span class="text-custom-beige mr-2">✓</span> Guia de Estudo Bíblico para Aprofundamento
+                            <span class="text-custom-beige mr-2">✓</span> Aumente seu nível espiritual com Deus
                         </li>
                         <li class="flex items-center">
-                            <span class="text-custom-beige mr-2">✓</span> 21 Dias de Desafio de Oração
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-custom-beige mr-2">✓</span> Acesso a atualizações futuras
+                            <span class="text-custom-beige mr-2">✓</span> Viva cheio do fruto do Espírito
                         </li>
                     </ul>
                     
@@ -407,7 +425,7 @@
                         </svg>
                     </button>
                     <div class="faq-answer mt-2 text-gray-700 hidden">
-                        Imediatamente após a confirmação do pagamento, você receberá um e-mail com os links para download do ebook em todos os formatos (PDF, ePub e Mobi). O acesso é vitalício e você poderá baixar novamente quando quiser.
+                        Imediatamente após a confirmação do pagamento, você receberá um e-mail com o link para download do ebook em formato PDF. O acesso é vitalício e você poderá baixar novamente quando quiser.
                     </div>
                 </div>
                 
@@ -453,21 +471,31 @@
     <!-- Final CTA -->
     <section id="compra" class="py-16 px-4 bg-custom-beige">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="title-font text-3xl md:text-4xl font-bold mb-6 text-black">
-                Não Deixe para Depois o que Sua Alma Precisa Agora
-            </h2>
+            <div class="mb-8 flex flex-col items-center">
+                <div class="mb-4 text-center">
+                    <p class="text-black text-xl md:text-3xl font-bold mb-1 animate__animated animate__fadeIn animate__infinite animate__slower" style="text-shadow: 0 0 10px rgba(216,200,184,0.8), 0 0 20px rgba(216,200,184,0.6), 0 0 30px rgba(216,200,184,0.4);">
+                        ⏳ ÚLTIMA CHANCE! 70% OFF ⏳
+                    </p>
+                    <p class="text-black text-base md:text-xl opacity-80 animate__animated animate__fadeIn animate__delay-1s animate__infinite animate__slower" style="text-shadow: 0 0 5px rgba(216,200,184,0.5);">
+                        Termina em 13/07/25
+                    </p>
+                </div>
+                <h2 class="title-font text-2xl md:text-4xl font-bold text-black text-center">
+                    Não Deixe para Depois o que Sua Alma Precisa Agora
+                </h2>
+            </div>
             
             <p class="text-xl mb-8 text-gray-800">
                 Deus está chamando você para uma relação mais profunda. Responda a esse chamado hoje mesmo!
             </p>
             
-            <div class="bg-white p-8 rounded-lg shadow-xl mb-8 inline-block">
+            <div class="bg-white p-6 md:p-8 rounded-lg shadow-xl mb-8 w-full max-w-md mx-auto">
                 <p class="text-xl mb-4">
                     <span class="line-through text-gray-500">R$ 97,00</span>
                     <span class="text-3xl font-bold text-black ml-2">R$ 27,00</span>
                 </p>
                 
-                <a href="#" class="neon-btn inline-block bg-black text-white font-bold py-4 px-8 rounded-full text-lg md:text-xl mb-4">
+                <a href="https://pay.hotmart.com/V100397327W" target="_blank" class="neon-btn inline-block bg-black text-white font-bold py-4 px-8 rounded-full text-lg md:text-xl mb-4 hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_20px_5px_rgba(216,200,184,0.4)]">
                     QUERO TER INTIMIDADE COM DEUS!
                 </a>
                 
@@ -496,6 +524,17 @@
     </footer>
     
     <script>
+        // Track CTA clicks
+        document.querySelectorAll('a[href*="hotmart.com"]').forEach(link => {
+            link.addEventListener('click', () => {
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-YOUR_CONVERSION_ID/AbCdEfGhIjKlMnOpQrStUvWxYz0123456789'
+                    });
+                }
+            });
+        });
+
         // FAQ toggle functionality
         document.querySelectorAll('.faq-question').forEach(question => {
             question.addEventListener('click', () => {
